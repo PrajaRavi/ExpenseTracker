@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+  
+ let  dailytools= new Map();
+    const array=[
+      {
+      date:"2023-08-07",
+      amount:100,
+    },
+      {
+      date:"2023-08-05",
+      amount:100,
+    },
+      {
+      date:"2023-08-07",
+      amount:10,
+    },
+      {
+      date:"2023-08-05",
+      amount:200,
+    },
+  
+  ]
+  let sum=0;
+  // dailytools.set()
+  // console.log(myobj.has("name"))
+  array.map((item,index)=>{
+// console.log('chala')
+    if(dailytools.has(item.date)){
+      // console.log(dailytools.get(item.date),item.amount)
+      let data=dailytools.get(item.date)+item.amount;
+      dailytools.set(item.date,data)
+    }
+    else{
+console.log("cahal");
+      dailytools.set(item.date,item.amount)
+    }
+ })
+ let mynewarr=[];
+ dailytools.forEach((value,key)=>{
+  mynewarr[key]=value;
+ })
+  console.log(mynewarr)
+  </script>
+</body>
+</html>
