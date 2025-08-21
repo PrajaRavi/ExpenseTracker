@@ -37,7 +37,7 @@ export default function Login() {
       seterror('')
 
     }
-    let {data}=await axios.post(`http://localhost:5000/user/login`,{
+    let {data}=await axios.post(`https://etracker-ba4e.onrender.com/user/login`,{
       email,password
     })
     if(data.msg=='first create an account'){
