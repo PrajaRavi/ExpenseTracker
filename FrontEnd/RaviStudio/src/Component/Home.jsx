@@ -180,7 +180,7 @@ const [chartData1, setChartData1] = useState({
   ]
 });
 async function GetAllTransaction(email){
-  let {data}=await axios.get(`http://localhost:5000/GetAllTheTransaction`)
+  let {data}=await axios.get(`https://etracker-ba4e.onrender.com/GetAllTheTransaction`)
   // console.log(data.msg)
 // let newarr=data.msg.filter((item)=>{
 //   return item.Time>Date.now()
@@ -193,7 +193,7 @@ async function GetUserIncomeData(email){
   // alert('Income data')
   // alert(email)
   let UserId=JSON.parse(localStorage.getItem("ExpeneUserData"))._id
-  let {data}=await axios.get(`http://localhost:5000/Income/GetAllIncomeData/${UserId}`)
+  let {data}=await axios.get(`https://etracker-ba4e.onrender.com/Income/GetAllIncomeData/${UserId}`)
   // console.log(data);
   let newarr=data.msg.filter((item)=>{
     return item.Time>Date.now()
@@ -222,7 +222,7 @@ async function GetUserExpenseData(email){
   // alert(email)
   let UserId=JSON.parse(localStorage.getItem("ExpeneUserData"))._id
 
-  let {data}=await axios.get(`http://localhost:5000/expense/GetAllExpenseData/${UserId}`)
+  let {data}=await axios.get(`https://etracker-ba4e.onrender.com/expense/GetAllExpenseData/${UserId}`)
   let newarr=data.msg.filter((item)=>{
     return item.Time>Date.now()
   })
