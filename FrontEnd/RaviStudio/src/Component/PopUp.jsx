@@ -45,7 +45,7 @@ GetUserExpenseData();
       let {data}=await axios.post(`http://localhost:5000/Income/Income`,{
       Icon,IncomeSource,Amount,date,UserId
     })
-    let Data=await axios.post(`http://localhost:5000/SetAllTransaction/${userdata.email}`,{
+    let Data=await axios.post(`https://etracker-ba4e.onrender.com/SetAllTransaction/${userdata.email}`,{
       Icon,IncomeSource,Amount,date,AmountType:'Income'
     })
     // console.log(data)
@@ -67,7 +67,7 @@ GetUserExpenseData();
       let {data}=await axios.post(`http://localhost:5000/expense/expense`,{
       Icon,IncomeSource,Amount,date,UserId
     })
-      let Data=await axios.post(`http://localhost:5000/SetAllTransaction/${userdata.email}`,{
+      let Data=await axios.post(`https://etracker-ba4e.onrender.com/SetAllTransaction/${userdata.email}`,{
       Icon,IncomeSource,Amount,date,AmountType:'Expense'
     })
     console.log(data)
