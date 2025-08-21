@@ -15,7 +15,7 @@ export default function Expense({setactivepop,userexpense}) {
 async function  HandleExpenseDelete(id){
   // alert(id);
 
-  let {data}=await axios.delete(`http://localhost:5000/expense/DeleteExpense/${id}`);
+  let {data}=await axios.delete(`https://etracker-ba4e.onrender.com/expense/DeleteExpense/${id}`);
   if(data.success){
     GetUserExpenseData();
     return toast.success("deleted");
