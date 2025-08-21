@@ -22,7 +22,7 @@ export default function App() {
     
 async function GetUserIncomeData(){
   let UserId=JSON.parse(localStorage.getItem("ExpeneUserData"))._id
-  let {data}=await axios.get(`http://localhost:5000/Income/GetAllIncomeData/${UserId}`)
+  let {data}=await axios.get(`https://etracker-ba4e.onrender.com/Income/GetAllIncomeData/${UserId}`)
   let newarr=data.msg.filter((item)=>{
     return item.Time>Date.now()
   })
@@ -86,7 +86,7 @@ setIncomePieChart(newarr1.map((item,index)=>{
 async function GetUserExpenseData(){
   let UserId=JSON.parse(localStorage.getItem("ExpeneUserData"))._id
 
-  let {data}=await axios.get(`http://localhost:5000/expense/GetAllExpenseData/${UserId}`)
+  let {data}=await axios.get(`https://etracker-ba4e.onrender.com/expense/GetAllExpenseData/${UserId}`)
   let newarr=data.msg.filter((item)=>{
     return item.Time>Date.now()
   })
