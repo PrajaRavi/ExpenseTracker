@@ -57,7 +57,7 @@ export default function SignUp() {
       seterror('')
 
     }
-    let {data}=await axios.post(`http://localhost:5000/user/register`,{
+    let {data}=await axios.post(`https://etracker-ba4e.onrender.com/user/register`,{
       UserName,email,contact,password
     })
     console.log(data)
