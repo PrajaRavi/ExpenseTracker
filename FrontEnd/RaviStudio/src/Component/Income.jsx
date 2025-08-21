@@ -1,4 +1,4 @@
-import * as XLSX from "xlsx";
+ import * as XLSX from "xlsx";
 import React, { useContext, useEffect, useState } from 'react'
 import { FaDownload, FaPlus, FaRupeeSign } from 'react-icons/fa'
 import {  MdDeleteForever} from 'react-icons/md'
@@ -41,7 +41,7 @@ export default function Income({setactivepop,userincome,}) {
   //   ]
   // });
   async function HandleIncomeDelete(id){
-    let {data}=await axios.delete(`http://localhost:5000/Income/DeleteIncome/${id}`);
+    let {data}=await axios.delete(`https://etracker-ba4e.onrender.com/Income/DeleteIncome/${id}`);
   if(data.success){
     GetUserIncomeData();
     return toast.success("deleted");
